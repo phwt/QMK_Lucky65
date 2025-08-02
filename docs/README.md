@@ -35,3 +35,12 @@ There are a lot of ways you can contribute to the QMK Community. The easiest way
 * [Translate our documentation into your language](translating.md)
 * [Report a bug](https://github.com/qmk/qmk_firmware/issues/new/choose)
 * [Open a Pull Request](contributing.md)
+
+## Building and flashing the firmware
+
+- [Flashing WB32 MCU](https://docs.qmk.fm/flashing#wb32-dfu)
+
+```sh
+qmk compile -kb lucky65v2_ -km via
+wb32-dfu-updater_cli -w -t -D path/to/file.bin
+```
